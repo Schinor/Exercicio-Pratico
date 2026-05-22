@@ -1,0 +1,13 @@
+@url = http://localhost:3000/autores
+
+POST {{url}}
+Content-Type: application/json
+
+{
+    //"nome" : "Mark Richards"
+    //"nome" : "Neal Ford"
+    "nome" : "Agatha Christie"
+}
+
+###
+GET {{url}}
