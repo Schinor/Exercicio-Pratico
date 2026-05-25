@@ -1,0 +1,26 @@
+@baseUrl = http://localhost:3000
+
+### Listar todas as plataformas
+GET {{baseUrl}}/plataformas
+
+### Obter uma plataforma por ID
+GET {{baseUrl}}/plataformas/1
+
+### Criar uma nova plataforma
+POST {{baseUrl}}/plataformas
+Content-Type: application/json
+
+{
+    "nome": "PC"
+}
+
+### Atualizar uma plataforma
+PUT {{baseUrl}}/plataformas/1
+Content-Type: application/json
+
+{
+    "nome": "Steam"
+}
+
+### Excluir uma plataforma
+DELETE {{baseUrl}}/plataformas/1

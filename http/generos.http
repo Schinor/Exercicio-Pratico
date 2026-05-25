@@ -1,26 +1,26 @@
-@url = http://localhost:3000/generos
+@baseUrl = http://localhost:3000
 
-GET {{url}}
+### Listar todos os gêneros
+GET {{baseUrl}}/generos
 
-###
-GET {{url}}/1
+### Obter um gênero por ID
+GET {{baseUrl}}/generos/1
 
-###
-POST {{url}}
+### Criar um novo gênero
+POST {{baseUrl}}/generos
 Content-Type: application/json
 
 {
-    //"nome": "Policial"
-    "nome": "Computação"
+    "nome": "Ação"
 }
 
-###
-PUT {{url}}/1
+### Atualizar um gênero
+PUT {{baseUrl}}/generos/1
 Content-Type: application/json
 
 {
-    "nome" : "Fantasia Medieval"
+    "nome": "Ação e Aventura"
 }
 
-###
-DELETE {{url}}/1
+### Excluir um gênero
+DELETE {{baseUrl}}/generos/1

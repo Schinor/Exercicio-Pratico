@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:3000
+
+### Listar todos os jogos
+GET {{baseUrl}}/jogos
+
+### Obter um jogo por ID
+GET {{baseUrl}}/jogos/1
+
+### Criar um novo jogo
+POST {{baseUrl}}/jogos
+Content-Type: application/json
+
+{
+    "titulo": "The Witcher 3",
+    "generoId": 1,
+    "plataformasId": [1]
+}
+
+### Atualizar um jogo
+PUT {{baseUrl}}/jogos/1
+Content-Type: application/json
+
+{
+    "titulo": "The Witcher 3: Wild Hunt",
+    "generoId": 1
+}
+
+### Atualizar plataformas de um jogo
+POST {{baseUrl}}/jogos/1/plataformas
+Content-Type: application/json
+
+{
+    "plataformasId": [1, 2]
+}
+
+### Excluir um jogo
+DELETE {{baseUrl}}/jogos/1
